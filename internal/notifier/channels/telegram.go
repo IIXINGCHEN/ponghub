@@ -20,6 +20,8 @@ func NewTelegramNotifier(config *configure.TelegramConfig) *TelegramNotifier {
 }
 
 // Send sends a Telegram bot notification with enhanced features
+//
+//goland:noinspection GoErrorStringFormat
 func (t *TelegramNotifier) Send(title, message string) error {
 	botToken := t.config.BotToken
 	if botToken == "" {

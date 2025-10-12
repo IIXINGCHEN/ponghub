@@ -16,6 +16,7 @@ body {
     padding: 0;
 }
 
+/*noinspection CssNonIntegerLengthInPixels*/
 .container {
     box-sizing: border-box;
     max-width: 100vw;
@@ -85,9 +86,12 @@ body {
     justify-self: start;
 }
 
+/*noinspection CssUnusedSymbol*/
 .status-info.status-info-none {
     color: var(--red-color);
 }
+
+/*noinspection CssUnusedSymbol*/
 .status-info.status-info-part {
     color: var(--yellow-color);
 }
@@ -143,6 +147,8 @@ body {
     color: var(--white-color);
     background: var(--red-color);
 }
+
+/*noinspection CssUnusedSymbol*/
 .availability-badge.availability-yellow {
     color: var(--white-color);
     background: var(--yellow-color);
@@ -218,6 +224,7 @@ body {
     line-height: 1.4;
 }
 
+/*noinspection CssUnusedSymbol*/
 .port-url .cert-status {
     position: relative;
     display: inline-flex;
@@ -227,12 +234,18 @@ body {
     height: 16px;
     margin-left: 4px;
 }
+
+/*noinspection CssUnusedSymbol*/
 .cert-status.cert-status-red {
     color: var(--red-color);
 }
+
+/*noinspection CssUnusedSymbol*/
 .cert-status.cert-status-yellow {
     color: var(--yellow-color);
 }
+
+/*noinspection CssUnusedSymbol*/
 .cert-status.cert-status-green {
     color: var(--green-color);
 }
@@ -249,6 +262,7 @@ body {
     fill: var(--green-color);
 }
 
+/*noinspection CssUnusedSymbol*/
 .cert-status.cert-status-red:hover::after,
 .cert-status.cert-status-yellow:hover::after,
 .cert-status.cert-status-green:hover::after,
@@ -285,9 +299,13 @@ body {
 .response-time-value.response-time-red {
     color: var(--red-color);
 }
+
+/*noinspection CssUnusedSymbol*/
 .response-time-value.response-time-yellow {
     color: var(--yellow-color);
 }
+
+/*noinspection CssUnusedSymbol*/
 .response-time-value.response-time-green {
     color: var(--green-color);
 }
@@ -324,6 +342,8 @@ body {
     background: var(--red-color);
     box-shadow: 0 1px 4px rgba(255, 65, 54, 0.08);
 }
+
+/*noinspection CssUnusedSymbol*/
 .status-rect.status-part {
     color: var(--yellow-color);
     background: var(--yellow-color);

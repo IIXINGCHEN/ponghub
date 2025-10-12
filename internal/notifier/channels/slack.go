@@ -19,6 +19,8 @@ func NewSlackNotifier(config *configure.SlackConfig) *SlackNotifier {
 }
 
 // Send sends a Slack webhook notification with enhanced features
+//
+//goland:noinspection GoErrorStringFormat
 func (s *SlackNotifier) Send(title, message string) error {
 	webhookURL := s.config.WebhookURL
 	if webhookURL == "" {

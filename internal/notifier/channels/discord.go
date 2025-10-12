@@ -19,6 +19,8 @@ func NewDiscordNotifier(config *configure.DiscordConfig) *DiscordNotifier {
 }
 
 // Send sends a Discord webhook notification with enhanced features
+//
+//goland:noinspection GoErrorStringFormat
 func (d *DiscordNotifier) Send(title, message string) error {
 	webhookURL := d.config.WebhookURL
 	if webhookURL == "" {

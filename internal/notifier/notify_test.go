@@ -11,7 +11,9 @@ import (
 	"github.com/wcy-dt/ponghub/internal/types/types/chk_result"
 )
 
+//goland:noinspection HttpUrlsUsage,HttpUrlsUsage,HttpUrlsUsage,HttpUrlsUsage,HttpUrlsUsage
 func TestCollectUnavailableEndpoints(t *testing.T) {
+	//goland:noinspection ALL
 	checkResult := []checker.Service{
 		{
 			Name: "Service1",
@@ -47,6 +49,7 @@ func TestCollectUnavailableEndpoints(t *testing.T) {
 	}
 }
 
+//goland:noinspection HttpUrlsUsage
 func TestCollectCertProblemEndpoints(t *testing.T) {
 	checkResult := []checker.Service{
 		{
@@ -107,6 +110,7 @@ func TestCollectCertProblemEndpoints(t *testing.T) {
 	}
 }
 
+//goland:noinspection HttpUrlsUsage,HttpUrlsUsage,HttpUrlsUsage
 func TestCountEndpoints(t *testing.T) {
 	endpointsMap := map[string][]checker.Endpoint{
 		"Service1": {
@@ -191,6 +195,7 @@ func TestWriteToFile(t *testing.T) {
 	}
 }
 
+//goland:noinspection HttpUrlsUsage,HttpUrlsUsage
 func TestWriteNotificationReport(t *testing.T) {
 	tempDir := t.TempDir()
 	testFile := filepath.Join(tempDir, "test_report.txt")

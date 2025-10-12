@@ -12,6 +12,8 @@ import (
 )
 
 // TestWebhookNotifier_BasicSend tests basic webhook functionality
+//
+//goland:noinspection DuplicatedCode
 func TestWebhookNotifier_BasicSend(t *testing.T) {
 	// Create a test server to receive webhook
 	var receivedPayload map[string]interface{}
@@ -32,7 +34,10 @@ func TestWebhookNotifier_BasicSend(t *testing.T) {
 		}
 
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("OK"))
+		_, err = w.Write([]byte("OK"))
+		if err != nil {
+			t.Errorf("Failed to write response: %v", err)
+		}
 	}))
 	defer server.Close()
 
@@ -65,6 +70,8 @@ func TestWebhookNotifier_BasicSend(t *testing.T) {
 }
 
 // TestWebhookNotifier_CustomPayload tests the custom payload functionality
+//
+//goland:noinspection DuplicatedCode
 func TestWebhookNotifier_CustomPayload(t *testing.T) {
 	// Test server to capture requests
 	var receivedPayload map[string]interface{}
@@ -157,7 +164,10 @@ func TestWebhookNotifier_ErrorHandling(t *testing.T) {
 	// Test server that returns error
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte("Internal Server Error"))
+		_, err := w.Write([]byte("Internal Server Error"))
+		if err != nil {
+			t.Errorf("Failed to write response: %v", err)
+		}
 	}))
 	defer server.Close()
 
@@ -324,7 +334,10 @@ func TestWebhookNotifier_RealWorldScenario(t *testing.T) {
 
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(`{"status": "success"}`))
+		_, err := w.Write([]byte(`{"status": "success"}`))
+		if err != nil {
+			t.Errorf("Failed to write response: %v", err)
+		}
 	}))
 	defer server.Close()
 

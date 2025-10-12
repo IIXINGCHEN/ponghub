@@ -297,6 +297,8 @@ func (w *WebhookNotifier) buildDiscordFormat(data map[string]interface{}) map[st
 }
 
 // buildTeamsFormat builds Microsoft Teams-compatible payload
+//
+//goland:noinspection HttpUrlsUsage
 func (w *WebhookNotifier) buildTeamsFormat(data map[string]interface{}) map[string]interface{} {
 	return map[string]interface{}{
 		"@type":      "MessageCard",
