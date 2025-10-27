@@ -36,12 +36,12 @@ PongHub 是一个开源的服务状态监控网站，旨在帮助用户监控和
 
 > [!TIP]
 > 默认情况下，GitHub Actions 每 30 分钟运行一次。如果你需要更改运行频率，请修改 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 文件中的 `cron` 表达式。
-> 
+>
 > 请不要将频率设置过高，以免触发 GitHub 的限制。
 
 > [!IMPORTANT]
 > 如果 GitHub Actions 未正常自动触发，手动触发一次即可。
-> 
+>
 > 请注意打开 GitHub Pages，并开启 GitHub Actions 的通知权限。
 
 ## 配置说明
@@ -101,11 +101,13 @@ services:
 ponghub 现已支持强大的参数化配置功能，允许在配置文件中使用多种类型的动态变量，这些变量会在程序运行时实时生成和解析。
 
 <details>
+
 <summary>点击展开查看支持的参数类型</summary>
 
 <div markdown="1">
 
 #### 📅 日期时间参数
+
 使用 `{{%格式}}` 格式定义日期时间参数：
 
 - `{{%Y-%m-%d}}` - 当前日期，格式：2006-01-02（如：2025-09-22）
@@ -127,32 +129,32 @@ ponghub 现已支持强大的参数化配置功能，允许在配置文件中使
 - `{{rand}}` - 生成0-1000000范围的随机数
 - `{{rand_int}}` - 生成大范围随机整数
 - `{{rand(min,max)}}` - 生成指定范围的随机数
-    - 示例：`{{rand(1,100)}}` - 生成1-100之间的随机数
-    - 示例：`{{rand(1000,9999)}}` - 生成4位随机数
+  - 示例：`{{rand(1,100)}}` - 生成1-100之间的随机数
+  - 示例：`{{rand(1000,9999)}}` - 生成4位随机数
 
 #### 🔤 随机字符串参数
 
 - `{{rand_str}}` - 生成8位随机字符串（字母+数字）
 - `{{rand_str(length)}}` - 生成指定长度的随机字符串
-    - 示例：`{{rand_str(16)}}` - 生成16位随机字符串
+  - 示例：`{{rand_str(16)}}` - 生成16位随机字符串
 - `{{rand_str_secure}}` - 生成16位加密安全的随机字符串
 - `{{rand_hex(length)}}` - 生成指定长度的十六进制随机字符串
-    - 示例：`{{rand_hex(8)}}` - 生成8位十六进制字符串
-    - 示例：`{{rand_hex(32)}}` - 生成32位十六进制字符串
+  - 示例：`{{rand_hex(8)}}` - 生成8位十六进制字符串
+  - 示例：`{{rand_hex(32)}}` - 生成32位十六进制字符串
 
 #### 🆔 UUID参数
 
 - `{{uuid}}` - 生成标准UUID（带连字符）
-    - 示例：`bf3655f7-8a93-4822-a458-2913a6fe4722`
+  - 示例：`bf3655f7-8a93-4822-a458-2913a6fe4722`
 - `{{uuid_short}}` - 生成短UUID（无连字符）
-    - 示例：`14d44b7334014484bb81b015fb2401bf`
+  - 示例：`14d44b7334014484bb81b015fb2401bf`
 
 #### 🌍 环境变量参数
 
 - `{{env(变量名)}}` - 读取环境变量的值
-    - 示例：`{{env(API_KEY)}}` - 读取API_KEY环境变量
-    - 示例：`{{env(VERSION)}}` - 读取VERSION环境变量
-    - 如果环境变量不存在，返回空字符串
+  - 示例：`{{env(API_KEY)}}` - 读取API_KEY环境变量
+  - 示例：`{{env(VERSION)}}` - 读取VERSION环境变量
+  - 如果环境变量不存在，返回空字符串
 
 环境变量可通过 GitHub Actions 的 Repository Secrets 设置
 
@@ -173,70 +175,70 @@ ponghub 现已支持强大的参数化配置功能，允许在配置文件中使
 #### 🔐 编码和解码参数
 
 - `{{base64(内容)}}` - 对提供的内容进行Base64编码
-    - 示例：`{{base64(hello world)}}` - 将"hello world"编码为Base64
+  - 示例：`{{base64(hello world)}}` - 将"hello world"编码为Base64
 - `{{url_encode(内容)}}` - 对提供的内容进行URL编码
-    - 示例：`{{url_encode(hello world)}}` - 对"hello world"进行URL编码
+  - 示例：`{{url_encode(hello world)}}` - 对"hello world"进行URL编码
 - `{{json_escape(内容)}}` - 对提供的内容进行JSON转义
-    - 示例：`{{json_escape("test")}}` - 转义引号和特殊字符以用于JSON
+  - 示例：`{{json_escape("test")}}` - 转义引号和特殊字符以用于JSON
 
 #### 🔢 数学运算参数
 
 - `{{add(a,b)}}` - 两数相加
-    - 示例：`{{add(10,5)}}` - 返回15
+  - 示例：`{{add(10,5)}}` - 返回15
 - `{{sub(a,b)}}` - 两数相减
-    - 示例：`{{sub(10,5)}}` - 返回5
+  - 示例：`{{sub(10,5)}}` - 返回5
 - `{{mul(a,b)}}` - 两数相乘
-    - 示例：`{{mul(10,5)}}` - 返回50
+  - 示例：`{{mul(10,5)}}` - 返回50
 - `{{div(a,b)}}` - 两数相除
-    - 示例：`{{div(10,5)}}` - 返回2
+  - 示例：`{{div(10,5)}}` - 返回2
 
 #### 📝 文本处理参数
 
 - `{{upper(文本)}}` - 将文本转换为大写
-    - 示例：`{{upper(hello)}}` - 返回"HELLO"
+  - 示例：`{{upper(hello)}}` - 返回"HELLO"
 - `{{lower(文本)}}` - 将文本转换为小写
-    - 示例：`{{lower(HELLO)}}` - 返回"hello"
+  - 示例：`{{lower(HELLO)}}` - 返回"hello"
 - `{{reverse(文本)}}` - 反转文本
-    - 示例：`{{reverse(hello)}}` - 返回"olleh"
+  - 示例：`{{reverse(hello)}}` - 返回"olleh"
 - `{{substr(文本,起始位置,长度)}}` - 从文本中提取子字符串
-    - 示例：`{{substr(hello world,0,5)}}` - 返回"hello"
+  - 示例：`{{substr(hello world,0,5)}}` - 返回"hello"
 
 #### 🎨 颜色生成参数
 
 - `{{color_hex}}` - 生成随机的十六进制颜色代码
-    - 示例：`#FF5733`
+  - 示例：`#FF5733`
 - `{{color_rgb}}` - 生成随机的RGB颜色值
-    - 示例：`rgb(255, 87, 51)`
+  - 示例：`rgb(255, 87, 51)`
 - `{{color_hsl}}` - 生成随机的HSL颜色值
-    - 示例：`hsl(120, 50%, 75%)`
+  - 示例：`hsl(120, 50%, 75%)`
 
 #### 📁 文件和MIME类型参数
 
 - `{{mime_type}}` - 生成随机的MIME类型
-    - 示例：`application/json`、`image/png`、`text/html`
+  - 示例：`application/json`、`image/png`、`text/html`
 - `{{file_ext}}` - 生成随机的文件扩展名
-    - 示例：`.jpg`、`.pdf`、`.txt`
+  - 示例：`.jpg`、`.pdf`、`.txt`
 
 #### 👤 虚拟数据生成参数
 
 - `{{fake_email}}` - 生成逼真的虚拟邮箱地址
-    - 示例：`john.smith@example.com`
+  - 示例：`john.smith@example.com`
 - `{{fake_phone}}` - 生成虚拟电话号码
-    - 示例：`+1-555-0123`
+  - 示例：`+1-555-0123`
 - `{{fake_name}}` - 生成虚拟人名
-    - 示例：`张三`
+  - 示例：`张三`
 - `{{fake_domain}}` - 生成虚拟域名
-    - 示例：`example-site.com`
+  - 示例：`example-site.com`
 
 #### ⏰ 时间计算参数
 
 - `{{time_add(时长)}}` - 在当前时间基础上增加指定时长
-    - 示例：`{{time_add(1h)}}` - 在当前时间上增加1小时
-    - 示例：`{{time_add(30m)}}` - 在当前时间上增加30分钟
-    - 支持的单位：s（秒）、m（分钟）、h（小时）、d（天）
+  - 示例：`{{time_add(1h)}}` - 在当前时间上增加1小时
+  - 示例：`{{time_add(30m)}}` - 在当前时间上增加30分钟
+  - 支持的单位：s（秒）、m（分钟）、h（小时）、d（天）
 - `{{time_sub(时长)}}` - 在当前时间基础上减去指定时长
-    - 示例：`{{time_sub(1d)}}` - 在当前时间上减去1天
-    - 示例：`{{time_sub(2h30m)}}` - 在当前时间上减去2小时30分钟
+  - 示例：`{{time_sub(1d)}}` - 在当前时间上减去1天
+  - 示例：`{{time_sub(2h30m)}}` - 在当前时间上减去2小时30分钟
 
 </div>
 </details>
@@ -261,6 +263,7 @@ services:
 PongHub 现在支持多种通知方式，当服务出现问题或证书即将过期时，可以通过多个渠道发送警报通知。
 
 <details>
+
 <summary>点击展开查看支持的通知类型</summary>
 
 <div markdown="1">

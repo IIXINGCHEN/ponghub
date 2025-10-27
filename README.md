@@ -29,19 +29,19 @@ PongHub is an open-source service status monitoring website designed to help use
 2. Modify the [`config.yaml`](config.yaml) file in the root directory to configure your service checks.
 
 3. Modify the [`CNAME`](CNAME) file in the root directory to set your custom domain name.
-   
+
    > If you do not need a custom domain, you can delete the `CNAME` file.
 
 4. Commit and push your changes to your repository. GitHub Actions will automatically run and deploy to GitHub Pages and require no intervention.
 
 > [!TIP]
 > By default, GitHub Actions runs every 30 minutes. If you need to change the frequency, modify the `cron` expression in the [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) file.
-> 
+>
 > Please do not set the frequency too high to avoid triggering GitHub's rate limits.
 
 > [!IMPORTANT]
 > If GitHub Actions does not trigger automatically, you can manually trigger it once.
-> 
+>
 > Please ensure that GitHub Pages is enabled and that you have granted notification permissions for GitHub Actions.
 
 ## Configuration Guide
@@ -101,11 +101,13 @@ services:
 ponghub now supports powerful parameterized configuration functionality, allowing the use of various types of dynamic variables in configuration files. These variables are generated and resolved in real-time during program execution.
 
 <details>
+
 <summary>Click to expand and view supported parameter types</summary>
 
 <div markdown="1">
 
 #### 📅 Date and Time Parameters
+
 Use `{{%format}}` format to define date and time parameters:
 
 - `{{%Y-%m-%d}}` - Current date, format: 2006-01-02 (e.g., 2025-09-22)
@@ -127,32 +129,32 @@ Use `{{%format}}` format to define date and time parameters:
 - `{{rand}}` - Generate random number in range 0-1000000
 - `{{rand_int}}` - Generate large range random integer
 - `{{rand(min,max)}}` - Generate random number in specified range
-    - Example: `{{rand(1,100)}}` - Generate random number between 1-100
-    - Example: `{{rand(1000,9999)}}` - Generate 4-digit random number
+  - Example: `{{rand(1,100)}}` - Generate random number between 1-100
+  - Example: `{{rand(1000,9999)}}` - Generate 4-digit random number
 
 #### 🔤 Random String Parameters
 
 - `{{rand_str}}` - Generate 8-character random string (letters + numbers)
 - `{{rand_str(length)}}` - Generate random string of specified length
-    - Example: `{{rand_str(16)}}` - Generate 16-character random string
+  - Example: `{{rand_str(16)}}` - Generate 16-character random string
 - `{{rand_str_secure}}` - Generate 16-character cryptographically secure random string
 - `{{rand_hex(length)}}` - Generate hexadecimal random string of specified length
-    - Example: `{{rand_hex(8)}}` - Generate 8-character hexadecimal string
-    - Example: `{{rand_hex(32)}}` - Generate 32-character hexadecimal string
+  - Example: `{{rand_hex(8)}}` - Generate 8-character hexadecimal string
+  - Example: `{{rand_hex(32)}}` - Generate 32-character hexadecimal string
 
 #### 🆔 UUID Parameters
 
 - `{{uuid}}` - Generate standard UUID (with hyphens)
-    - Example: `bf3655f7-8a93-4822-a458-2913a6fe4722`
+  - Example: `bf3655f7-8a93-4822-a458-2913a6fe4722`
 - `{{uuid_short}}` - Generate short UUID (without hyphens)
-    - Example: `14d44b7334014484bb81b015fb2401bf`
+  - Example: `14d44b7334014484bb81b015fb2401bf`
 
 #### 🌍 Environment Variable Parameters
 
 - `{{env(variable_name)}}` - Read environment variable value
-    - Example: `{{env(API_KEY)}}` - Read API_KEY environment variable
-    - Example: `{{env(VERSION)}}` - Read VERSION environment variable
-    - Returns empty string if environment variable doesn't exist
+  - Example: `{{env(API_KEY)}}` - Read API_KEY environment variable
+  - Example: `{{env(VERSION)}}` - Read VERSION environment variable
+  - Returns empty string if environment variable doesn't exist
 
 Environment variables can be set through GitHub Actions Repository Secrets
 
@@ -173,70 +175,70 @@ Environment variables can be set through GitHub Actions Repository Secrets
 #### 🔐 Encoding and Decoding Parameters
 
 - `{{base64(content)}}` - Base64 encode the provided content
-    - Example: `{{base64(hello world)}}` - Encode "hello world" to Base64
+  - Example: `{{base64(hello world)}}` - Encode "hello world" to Base64
 - `{{url_encode(content)}}` - URL encode the provided content
-    - Example: `{{url_encode(hello world)}}` - URL encode "hello world"
+  - Example: `{{url_encode(hello world)}}` - URL encode "hello world"
 - `{{json_escape(content)}}` - JSON escape the provided content
-    - Example: `{{json_escape("test")}}` - Escape quotes and special characters for JSON
+  - Example: `{{json_escape("test")}}` - Escape quotes and special characters for JSON
 
 #### 🔢 Mathematical Operation Parameters
 
 - `{{add(a,b)}}` - Add two numbers
-    - Example: `{{add(10,5)}}` - Returns 15
+  - Example: `{{add(10,5)}}` - Returns 15
 - `{{sub(a,b)}}` - Subtract two numbers
-    - Example: `{{sub(10,5)}}` - Returns 5
+  - Example: `{{sub(10,5)}}` - Returns 5
 - `{{mul(a,b)}}` - Multiply two numbers
-    - Example: `{{mul(10,5)}}` - Returns 50
+  - Example: `{{mul(10,5)}}` - Returns 50
 - `{{div(a,b)}}` - Divide two numbers
-    - Example: `{{div(10,5)}}` - Returns 2
+  - Example: `{{div(10,5)}}` - Returns 2
 
 #### 📝 Text Processing Parameters
 
 - `{{upper(text)}}` - Convert text to uppercase
-    - Example: `{{upper(hello)}}` - Returns "HELLO"
+  - Example: `{{upper(hello)}}` - Returns "HELLO"
 - `{{lower(text)}}` - Convert text to lowercase
-    - Example: `{{lower(HELLO)}}` - Returns "hello"
+  - Example: `{{lower(HELLO)}}` - Returns "hello"
 - `{{reverse(text)}}` - Reverse text
-    - Example: `{{reverse(hello)}}` - Returns "olleh"
+  - Example: `{{reverse(hello)}}` - Returns "olleh"
 - `{{substr(text,start,length)}}` - Extract substring from text
-    - Example: `{{substr(hello world,0,5)}}` - Returns "hello"
+  - Example: `{{substr(hello world,0,5)}}` - Returns "hello"
 
 #### 🎨 Color Generation Parameters
 
 - `{{color_hex}}` - Generate random hexadecimal color code
-    - Example: `#FF5733`
+  - Example: `#FF5733`
 - `{{color_rgb}}` - Generate random RGB color value
-    - Example: `rgb(255, 87, 51)`
+  - Example: `rgb(255, 87, 51)`
 - `{{color_hsl}}` - Generate random HSL color value
-    - Example: `hsl(120, 50%, 75%)`
+  - Example: `hsl(120, 50%, 75%)`
 
 #### 📁 File and MIME Type Parameters
 
 - `{{mime_type}}` - Generate random MIME type
-    - Example: `application/json`, `image/png`, `text/html`
+  - Example: `application/json`, `image/png`, `text/html`
 - `{{file_ext}}` - Generate random file extension
-    - Example: `.jpg`, `.pdf`, `.txt`
+  - Example: `.jpg`, `.pdf`, `.txt`
 
 #### 👤 Fake Data Generation Parameters
 
 - `{{fake_email}}` - Generate realistic fake email address
-    - Example: `john.smith@example.com`
+  - Example: `john.smith@example.com`
 - `{{fake_phone}}` - Generate fake phone number
-    - Example: `+1-555-0123`
+  - Example: `+1-555-0123`
 - `{{fake_name}}` - Generate fake person name
-    - Example: `John Smith`
+  - Example: `John Smith`
 - `{{fake_domain}}` - Generate fake domain name
-    - Example: `example-site.com`
+  - Example: `example-site.com`
 
 #### ⏰ Time Calculation Parameters
 
 - `{{time_add(duration)}}` - Add specified duration to current time
-    - Example: `{{time_add(1h)}}` - Add 1 hour to current time
-    - Example: `{{time_add(30m)}}` - Add 30 minutes to current time
-    - Supported units: s (seconds), m (minutes), h (hours), d (days)
+  - Example: `{{time_add(1h)}}` - Add 1 hour to current time
+  - Example: `{{time_add(30m)}}` - Add 30 minutes to current time
+  - Supported units: s (seconds), m (minutes), h (hours), d (days)
 - `{{time_sub(duration)}}` - Subtract specified duration from current time
-    - Example: `{{time_sub(1d)}}` - Subtract 1 day from current time
-    - Example: `{{time_sub(2h30m)}}` - Subtract 2 hours 30 minutes from current time
+  - Example: `{{time_sub(1d)}}` - Subtract 1 day from current time
+  - Example: `{{time_sub(2h30m)}}` - Subtract 2 hours 30 minutes from current time
 
 </div>
 </details>
@@ -261,6 +263,7 @@ services:
 PongHub now supports multiple notification methods. When services have issues or certificates are about to expire, alerts can be sent through multiple channels.
 
 <details>
+
 <summary>Click to expand and view supported notification types</summary>
 
 <div markdown="1">
