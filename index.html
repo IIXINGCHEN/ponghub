@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Status Report</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/icon.png">
+    <style>
+        :root {
+            --primary-color: #0077cc;
+            --secondary-color: #f0f4fa;
+            --background-color: #f7fafd;
+            --red-color: #ff4136;
+            --yellow-color: #ffb700;
+            --green-color: #2ecc40;
+            --gray-color: #e0e0e0;
+            --white-color: #ffffff;
+        }
+        .container {
+            width: calc(12px * 72);
+        }
+        .service-header .status-bar,
+        .port-block .status-bar {
+            grid-template-columns: repeat(72, 1fr) !important;
+        }
+        @media (max-width: calc(12px * 72)) {
+            .container {
+                width: 100%;
+                min-width: 0;
+                max-width: 100vw;
+                padding-left: 2px;
+                padding-right: 2px;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .logo-img {
+                height: auto;
+                max-height: 96px;
+                max-width: 100%;
+            }
+            .update-time {
+                font-size: 0.92em;
+                margin-bottom: 10px;
+            }
+            .service-block {
+                padding: 10px 6px 10px 6px;
+                margin-bottom: 18px;
+                border-radius: 8px;
+            }
+            .service-header h2 {
+                font-size: 1.5em;
+            }
+            .service-header .availability-badge {
+                font-size: 1.5em;
+                padding: 6px 12px;
+            }
+            .service-header .status-bar,
+            .port-block .status-bar {
+                padding: 0;
+                column-gap: 0;
+            }
+            .status-bar .status-rect {
+                height: 18px;
+                margin: 0;
+                width: 100%;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .port-block {
+                margin-bottom: 12px;
+                padding: 6px 4px 4px 4px;
+                border-radius: 6px;
+                background: var(--secondary-color);
+                box-shadow: 0 1px 4px rgba(44, 124, 255, 0.04);
+            }
+            .port-block .port-url {
+                min-width: 80px;
+                font-size: 0.92em;
+                margin-bottom: 2px;
+                color: var(--primary-color);
+                font-weight: 500;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/static/logo.png" alt="Service Status Report" class="logo-img">
+        <div class="update-time">Last Updated: 2026-01-11T14:40:19Z</div>
+        
+        <div class="service-block">
+            <div class="service-header">
+                <h2>api</h2>
+                
+                <div class="status-info status-info-all">
+                    <span class="status-ball"></span>
+                    
+                        Service operational
+                    
+                </div>
+                
+                
+                <div class="availability-badge 
+                    availability-yellow">
+                    <span class="availability-label">Availability</span>
+                    <span class="availability-value">98.6%</span>
+                </div>
+                <div class="status-bar status-bar-header">
+                    
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T20:13:43Z: all" data-time="2026-01-09T20:13:43Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T20:43:04Z: all" data-time="2026-01-09T20:43:04Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T21:11:43Z: all" data-time="2026-01-09T21:11:43Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T21:39:23Z: all" data-time="2026-01-09T21:39:23Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T22:11:27Z: all" data-time="2026-01-09T22:11:27Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T22:42:42Z: all" data-time="2026-01-09T22:42:42Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T23:11:07Z: all" data-time="2026-01-09T23:11:07Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-09T23:38:39Z: all" data-time="2026-01-09T23:38:39Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T00:53:33Z: all" data-time="2026-01-10T00:53:33Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T02:46:21Z: all" data-time="2026-01-10T02:46:21Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T03:52:17Z: all" data-time="2026-01-10T03:52:17Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T04:25:16Z: all" data-time="2026-01-10T04:25:16Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T04:50:56Z: all" data-time="2026-01-10T04:50:56Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T05:12:54Z: all" data-time="2026-01-10T05:12:54Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T05:41:36Z: all" data-time="2026-01-10T05:41:36Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T06:16:25Z: all" data-time="2026-01-10T06:16:25Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T06:49:56Z: all" data-time="2026-01-10T06:49:56Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T07:11:11Z: all" data-time="2026-01-10T07:11:11Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T07:36:48Z: all" data-time="2026-01-10T07:36:48Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T08:14:25Z: all" data-time="2026-01-10T08:14:25Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T08:45:45Z: all" data-time="2026-01-10T08:45:45Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T09:11:06Z: all" data-time="2026-01-10T09:11:06Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T09:38:49Z: all" data-time="2026-01-10T09:38:49Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T10:10:40Z: all" data-time="2026-01-10T10:10:40Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T10:41:41Z: all" data-time="2026-01-10T10:41:41Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T11:09:14Z: all" data-time="2026-01-10T11:09:14Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-none" title="2026-01-10T11:34:19Z: none" data-time="2026-01-10T11:34:19Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T12:19:12Z: all" data-time="2026-01-10T12:19:12Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T13:04:09Z: all" data-time="2026-01-10T13:04:09Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T13:44:03Z: all" data-time="2026-01-10T13:44:03Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T14:10:18Z: all" data-time="2026-01-10T14:10:18Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T14:40:00Z: all" data-time="2026-01-10T14:40:00Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T15:10:18Z: all" data-time="2026-01-10T15:10:18Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T15:38:15Z: all" data-time="2026-01-10T15:38:15Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T16:12:13Z: all" data-time="2026-01-10T16:12:13Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T16:44:36Z: all" data-time="2026-01-10T16:44:36Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T17:09:32Z: all" data-time="2026-01-10T17:09:32Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T17:38:48Z: all" data-time="2026-01-10T17:38:48Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T18:15:48Z: all" data-time="2026-01-10T18:15:48Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T18:48:46Z: all" data-time="2026-01-10T18:48:46Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T19:08:10Z: all" data-time="2026-01-10T19:08:10Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T19:32:39Z: all" data-time="2026-01-10T19:32:39Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T20:12:01Z: all" data-time="2026-01-10T20:12:01Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T20:40:18Z: all" data-time="2026-01-10T20:40:18Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T21:09:17Z: all" data-time="2026-01-10T21:09:17Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T21:36:25Z: all" data-time="2026-01-10T21:36:25Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T22:10:38Z: all" data-time="2026-01-10T22:10:38Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T22:41:00Z: all" data-time="2026-01-10T22:41:00Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T23:10:38Z: all" data-time="2026-01-10T23:10:38Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-10T23:37:46Z: all" data-time="2026-01-10T23:37:46Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T01:00:25Z: all" data-time="2026-01-11T01:00:25Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T03:20:43Z: all" data-time="2026-01-11T03:20:43Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T04:30:16Z: all" data-time="2026-01-11T04:30:16Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T05:17:46Z: all" data-time="2026-01-11T05:17:46Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T05:45:26Z: all" data-time="2026-01-11T05:45:26Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T06:17:27Z: all" data-time="2026-01-11T06:17:27Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T06:51:44Z: all" data-time="2026-01-11T06:51:44Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T07:13:10Z: all" data-time="2026-01-11T07:13:10Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T07:38:35Z: all" data-time="2026-01-11T07:38:35Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T08:14:33Z: all" data-time="2026-01-11T08:14:33Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T08:45:37Z: all" data-time="2026-01-11T08:45:37Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T09:11:37Z: all" data-time="2026-01-11T09:11:37Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T09:39:29Z: all" data-time="2026-01-11T09:39:29Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T10:11:23Z: all" data-time="2026-01-11T10:11:23Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T10:42:50Z: all" data-time="2026-01-11T10:42:50Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T11:08:52Z: all" data-time="2026-01-11T11:08:52Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T11:34:58Z: all" data-time="2026-01-11T11:34:58Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T12:20:35Z: all" data-time="2026-01-11T12:20:35Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T13:05:15Z: all" data-time="2026-01-11T13:05:15Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T13:45:03Z: all" data-time="2026-01-11T13:45:03Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T14:10:06Z: all" data-time="2026-01-11T14:10:06Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                    
+                    <div class="status-rect status-all" title="2026-01-11T14:40:19Z: all" data-time="2026-01-11T14:40:19Z">
+                        
+                        <div class="status-rect-content" style="height: 100%;"></div>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            
+            <div class="port-block">
+                
+                <div class="port-url status-info-all">
+                    <span class="status-ball"></span>
+                    <span class="url-text" title="https://aiall.hoolhub.top">
+                        
+                            https://aiall.hoolhub.top
+                        
+                    </span>
+                    <div class="cert-status
+                        cert-status-green"
+                        data-time="Cert will expire in 49 days">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 11.5a1.504 1.504 0 0 0-1.5-1.5H18V7A6 6 0 0 0 6 7v3H4.5A1.504 1.504 0 0 0 3 11.5v10A1.504 1.504 0 0 0 4.5 23h15a1.504 1.504 0 0 0 1.5-1.5zM9 7a3 3 0 0 1 6 0v3H9zm4 8h-1v1h1v1h-1v1h1v1h-1v1h-1v-5h1v-1h1z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="port-response-time">
+                    
+                    
+                        <span class="response-time-value
+                            response-time-yellow">
+                            169 ms
+                        </span>
+                    
+                </div>
+                <div class="status-bar port-status-bar">
+                    
+                    
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T20:13:43Z">
+                                
+                                    <div class="status-rect-content" style="height: 44.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T20:43:04Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T21:11:43Z">
+                                
+                                    <div class="status-rect-content" style="height: 28.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T21:39:23Z">
+                                
+                                    <div class="status-rect-content" style="height: 11.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T22:11:27Z">
+                                
+                                    <div class="status-rect-content" style="height: 65.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T22:42:42Z">
+                                
+                                    <div class="status-rect-content" style="height: 25.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T23:11:07Z">
+                                
+                                    <div class="status-rect-content" style="height: 12.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-09T23:38:39Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T00:53:33Z">
+                                
+                                    <div class="status-rect-content" style="height: 39.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T02:46:22Z">
+                                
+                                    <div class="status-rect-content" style="height: 61.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T03:52:17Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T04:25:16Z">
+                                
+                                    <div class="status-rect-content" style="height: 34.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T04:50:56Z">
+                                
+                                    <div class="status-rect-content" style="height: 88%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T05:12:54Z">
+                                
+                                    <div class="status-rect-content" style="height: 11.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T05:41:37Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T06:16:26Z">
+                                
+                                    <div class="status-rect-content" style="height: 65.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T06:49:57Z">
+                                
+                                    <div class="status-rect-content" style="height: 60.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T07:11:11Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T07:36:48Z">
+                                
+                                    <div class="status-rect-content" style="height: 62.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T08:14:25Z">
+                                
+                                    <div class="status-rect-content" style="height: 74.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T08:45:46Z">
+                                
+                                    <div class="status-rect-content" style="height: 63.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T09:11:06Z">
+                                
+                                    <div class="status-rect-content" style="height: 11.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T09:38:49Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T10:10:40Z">
+                                
+                                    <div class="status-rect-content" style="height: 26.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T10:41:42Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T11:09:15Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-none" data-time="2026-01-10T11:34:19Z">
+                                
+                                    <div class="status-rect-content" style="height: 100%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T12:19:12Z">
+                                
+                                    <div class="status-rect-content" style="height: 31.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T13:04:09Z">
+                                
+                                    <div class="status-rect-content" style="height: 48.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T13:44:03Z">
+                                
+                                    <div class="status-rect-content" style="height: 33.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T14:10:18Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T14:40:00Z">
+                                
+                                    <div class="status-rect-content" style="height: 22.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T15:10:18Z">
+                                
+                                    <div class="status-rect-content" style="height: 26.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T15:38:15Z">
+                                
+                                    <div class="status-rect-content" style="height: 46.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T16:12:13Z">
+                                
+                                    <div class="status-rect-content" style="height: 11%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T16:44:37Z">
+                                
+                                    <div class="status-rect-content" style="height: 21%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T17:09:32Z">
+                                
+                                    <div class="status-rect-content" style="height: 27.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T17:38:48Z">
+                                
+                                    <div class="status-rect-content" style="height: 49%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T18:15:48Z">
+                                
+                                    <div class="status-rect-content" style="height: 64.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T18:48:46Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T19:08:10Z">
+                                
+                                    <div class="status-rect-content" style="height: 48.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T19:32:39Z">
+                                
+                                    <div class="status-rect-content" style="height: 48.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T20:12:01Z">
+                                
+                                    <div class="status-rect-content" style="height: 24.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T20:40:18Z">
+                                
+                                    <div class="status-rect-content" style="height: 49.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T21:09:18Z">
+                                
+                                    <div class="status-rect-content" style="height: 49.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T21:36:25Z">
+                                
+                                    <div class="status-rect-content" style="height: 22.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T22:10:39Z">
+                                
+                                    <div class="status-rect-content" style="height: 47.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T22:41:00Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T23:10:38Z">
+                                
+                                    <div class="status-rect-content" style="height: 24.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-10T23:37:47Z">
+                                
+                                    <div class="status-rect-content" style="height: 36.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T01:00:26Z">
+                                
+                                    <div class="status-rect-content" style="height: 29.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T03:20:43Z">
+                                
+                                    <div class="status-rect-content" style="height: 28.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T04:30:16Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T05:17:46Z">
+                                
+                                    <div class="status-rect-content" style="height: 49%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T05:45:27Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T06:17:27Z">
+                                
+                                    <div class="status-rect-content" style="height: 26.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T06:51:44Z">
+                                
+                                    <div class="status-rect-content" style="height: 100%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T07:13:11Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T07:38:35Z">
+                                
+                                    <div class="status-rect-content" style="height: 19.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T08:14:33Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T08:45:37Z">
+                                
+                                    <div class="status-rect-content" style="height: 10.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T09:11:37Z">
+                                
+                                    <div class="status-rect-content" style="height: 21.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T09:39:30Z">
+                                
+                                    <div class="status-rect-content" style="height: 48.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T10:11:23Z">
+                                
+                                    <div class="status-rect-content" style="height: 46.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T10:42:50Z">
+                                
+                                    <div class="status-rect-content" style="height: 26.6%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T11:08:52Z">
+                                
+                                    <div class="status-rect-content" style="height: 19.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T11:34:58Z">
+                                
+                                    <div class="status-rect-content" style="height: 46.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T12:20:35Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T13:05:15Z">
+                                
+                                    <div class="status-rect-content" style="height: 61.2%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T13:45:03Z">
+                                
+                                    <div class="status-rect-content" style="height: 26.4%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T14:10:07Z">
+                                
+                                    <div class="status-rect-content" style="height: 10%;"></div>
+                                
+                            </div>
+                        
+                    
+                        
+                            <div class="status-rect status-all" data-time="2026-01-11T14:40:19Z">
+                                
+                                    <div class="status-rect-content" style="height: 33.8%;"></div>
+                                
+                            </div>
+                        
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<footer class="footer">
+    Want to build your own service monitoring site?<br>
+    <a href="https://github.com/WCY-dt/ponghub" target="_blank" rel="noopener" class="footer-link">Visit the GitHub repo</a> and join us!
+</footer>
+</html>
