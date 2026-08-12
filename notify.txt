@@ -1,0 +1,22 @@
+=== PongHub Service Status Report ===
+Generated at: 2026-08-12 05:10:46
+
+🔴 UNAVAILABLE SERVICES:
+==================================================
+
+📋 Service: api
+  • URL: https://aiall.hoolhub.top
+    Method: GET
+    Attempts: 0/2 successful
+    Check Time: 2026-08-12T05:10:46Z - 2026-08-12T05:10:46Z
+    Failure Details:
+      - SSL Certificate Error: dial tcp: lookup aiall.hoolhub.top on 127.0.0.53:53: no such host
+      - StatusCode: N/A, Error: Get "https://aiall.hoolhub.top": dial tcp: lookup aiall.hoolhub.top on 127.0.0.53:53: no such host
+      - StatusCode: N/A, Error: Get "https://aiall.hoolhub.top": dial tcp: lookup aiall.hoolhub.top on 127.0.0.53:53: no such host
+
+
+📊 SUMMARY:
+==================================================
+Unavailable Endpoints: 1
+Certificate Issues: 0
+Total Issues: 1
